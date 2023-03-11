@@ -1,0 +1,9 @@
+---
+- name: My First task
+  hosts: servers
+  tasks:
+    - name: Ping
+      ping:
+
+      
+

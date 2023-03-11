@@ -1,0 +1,10 @@
+---
+- name: install multiple package
+  hosts: server1
+  become: yes
+  tasks:
+    - name : installing packages
+      apt: 
+        name: ['cmatrix','sl','libaa-bin']
+        state: present
+
