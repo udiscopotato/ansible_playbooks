@@ -1,0 +1,7 @@
+Here some ad hoc commands 
+
+- ansible hostname -m gather_facts    (this will gather all information about your host server)
+- ansible hostname -a "uptime"      (how much time the servers are up for)
+- ansible hostname -m apt -a upgrade=dist --become  (this will upgrade all packages on host server)
+- ansible hostname -m apt -a "name=xyz state=latest" --become (this will update all repository to latest version available on host server)
+

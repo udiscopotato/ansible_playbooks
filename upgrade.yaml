@@ -1,0 +1,12 @@
+---
+- name: upgrade packages
+  hosts: servers
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: upgrade
+      apt:
+        update_cache: true
+        upgrade: dist
+        cache_valid_time: 3600
+        force_apt_get: true

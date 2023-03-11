@@ -1,0 +1,9 @@
+---
+- name: remove a package
+  hosts: server1
+  become: true
+  tasks:
+    - name: removing apache2
+      apt:
+        name: apache2
+        state: absent

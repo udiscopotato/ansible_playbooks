@@ -1,0 +1,9 @@
+---
+- name: check connection to servers
+  hosts: servers
+  tasks:
+    - name: ping hosts
+      ping:
+    - name: printing message
+      debug:
+        msg: "Hello There"

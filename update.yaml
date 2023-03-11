@@ -1,0 +1,13 @@
+---
+- name: Updating Remote host repository
+  hosts: servers #you can change this as your requirement
+  become: yes
+  become_method: sudo 
+  tasks:
+    - name: Updating apt repository cache
+      apt:
+        update_cache: true
+        cache_valid_time: 3600
+        force_apt_get: true
+
+  

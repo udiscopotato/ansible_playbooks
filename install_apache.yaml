@@ -1,0 +1,16 @@
+---
+- name: install some pkg
+  hosts: server1
+  become: true
+  tasks:
+    - name: update repository index
+      apt:
+        update_cache: true
+    - name: install apahce2
+      apt:
+        name: apache2
+        state: latest
+          #    - name: install php support for apache2
+          #      apt:
+          #        name: libapahce2-mod-php
+         #        state: latest
