@@ -16,3 +16,21 @@
         name: apache2
         state: restarted
         enabled: yes
+    - name: Firewall
+      apt:
+        name: firewalld
+        state: present
+    - name: firewall
+      firewalld: 
+       permanent: true
+       port: "{{item.port}}/{{item.proto}}"
+       state: "{{item.state}}"
+       zone: "{{item.zone}}"
+      with_items:
+        - { port: "80", proto: "tcp", state: "enabled", zone: "public"}
+    - name: service setup
+      service:
+        name: firewalld
+        state: restarted
+
+
