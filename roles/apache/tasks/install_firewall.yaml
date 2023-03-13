@@ -1,0 +1,6 @@
+---
+- name: install firewalld
+  become: yes
+  apt:
+    name: firewalld
+    state: latest

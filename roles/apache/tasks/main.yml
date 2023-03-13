@@ -1,0 +1,5 @@
+---
+- import_tasks: install_apache.yaml
+- import_tasks: copy_files.yaml
+- import_tasks: install_firewall.yaml
+- import_tasks: firewall_config.yaml

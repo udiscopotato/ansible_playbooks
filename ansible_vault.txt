@@ -1,0 +1,20 @@
+Ansible vault
+
+
+1. to encrypt a playbook 
+	- ansible-vault encrypt [playbook name]
+
+2. to view a  playbook
+	- ansible-vault view [playbook name]
+
+3. to edit a playbook
+	- ansible-vault edit [playbook name]
+
+4. to run a playbook without decrypting 
+	- ansible-playbook [playbook name] --ask-vault-pass 
+
+5. to create a encrypted playbook from start
+	- ansible-vault create [playbook name]
+
+6. to play a encrypted playbook from a password authorized file
+	- ansible-playbook [playbook name] --vault-password-file=pass_file (before parsing pass_file we need to save our password in pass_file i.e. echo "pass" > pass_file

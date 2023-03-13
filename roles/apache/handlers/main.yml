@@ -1,0 +1,4 @@
+---
+# handlers file for apache
+- import_tasks: apache_restart.yaml
+- import_tasks: firewall_restart.yaml

@@ -1,0 +1,8 @@
+---
+-name: "restarting a program"
+-hosts: server2
+-become: yes
+-tasks:
+      sevice:
+        name: firewalld
+        state: restarted

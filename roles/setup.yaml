@@ -1,0 +1,5 @@
+---
+- name: Executing my First role
+  hosts: server2
+  roles:
+   - apache

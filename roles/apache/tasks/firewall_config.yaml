@@ -1,0 +1,10 @@
+---
+- name: configure firewalld
+  become: yes
+  firewalld: 
+       permanent: true
+       port: "{{item.port}}/{{item.proto}}"
+       state: "{{item.state}}"
+       zone: "{{item.zone}}"
+  with_items:
+        - { port: "80", proto: "tcp", state: "enabled", zone: "public"}
